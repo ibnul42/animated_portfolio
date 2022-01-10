@@ -35,10 +35,10 @@ export default function Contact() {
         <div className="social">
           <h3>Connect</h3>
           <div className="social_links">
-            <FacebookOutlinedIcon className="icon" />
-            <TwitterIcon className="icon" />
-            <InstagramIcon className="icon" />
-            <GitHubIcon className="icon" />
+            <a href="https://www.facebook.com/" target="_blank"><FacebookOutlinedIcon className="icon" /></a>
+            <a href="https://www.twitter.com" target="_blank"><TwitterIcon className="icon" /></a>
+            <a href="https://www.instagram.com" target="_blank"><InstagramIcon className="icon" /></a>
+            <a href="https://www.github.com" target="_blank"><GitHubIcon className="icon" /></a> 
           </div>
         </div>
 
@@ -49,8 +49,8 @@ export default function Contact() {
           {message && <span>Thanks, I'll reply ASAP :)</span>}
         </form> */}
       </div>
-      <a href="#intro">
-        <DoubleArrowIcon className="backToHome" />
+      <a href="#intro" className="backToHome">
+        <DoubleArrowIcon />
       </a>
     </div>
   );

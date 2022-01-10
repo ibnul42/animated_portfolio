@@ -1,10 +1,27 @@
 @import "../../global.scss";
 
 .intro {
+  position: relative;
   background-color: white;
   display: flex;
+  
+  // background-image: linear-gradient(to bottom, rgba(236, 232, 232, 0.6) 10%,rgba(226, 214, 214, 0.6) 10%), url('binary.jpg');
+
+  // &::after{
+  //   content: '';
+  //   position: absolute;
+  //   background-image: url('binary.jpg');
+  //   background-size: cover;
+  //   background-position: top center;
+  //   opacity: 0.5;
+  // }
 
   @include mobile{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include tab {
     flex-direction: column;
     align-items: center;
   }
@@ -22,16 +39,25 @@
       align-items: flex-end;
       justify-content: center;
       float: right;
+      position: relative;
+      overflow: hidden;
 
       @include mobile{
         align-items: flex-start;
+        border-radius: 0%;
+        background-color: white;
       }
 
       img {
         height: 90%;
+        object-fit: contain;
+        display: block;
+        height: 134%;
+        position: absolute;
+        top: -111px;
 
         @include mobile{
-          height: 50%;
+          height: 100%;
         }
       }
     }
@@ -107,4 +133,21 @@
       }
     }
   }
+}
+
+
+
+.intro:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.35;
+  background-image: url('binary.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 }

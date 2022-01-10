@@ -4,8 +4,8 @@
   background-color: white;
   display: flex;
   position: relative;
-
-  a{
+  
+  .backToHome{
     position: absolute;
     right: 0;
     bottom: 0;
@@ -24,6 +24,8 @@
         }
       }
   }
+
+  
 
   @include mobile {
     flex-direction: column;
@@ -69,10 +71,15 @@
       }
 
       .social_links{
+        // position: relative;
         margin-top: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        a{
+          // position: absolute;
+        }
 
         .icon{
           font-size: 32px;

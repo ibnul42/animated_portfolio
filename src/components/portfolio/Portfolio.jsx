@@ -79,17 +79,17 @@ export default function Portfolio() {
       </ul>
       <div className="container">
         {data.map((d, index) => (
-          <div key={index} className="item">
+          <a href={d.link} target="_blank" key={index} className="item">
             <img
               src={d.img}
               alt=""
             />
             <h3>{d.title}</h3>
-          </div>
+          </a>
         ))}
       </div>
 
-      <a href="#intro">
+      <a href="#intro" className="backToTop">
         <DoubleArrowIcon className="backToHome" />
       </a>
     </div>

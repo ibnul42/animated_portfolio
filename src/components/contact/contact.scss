@@ -4,6 +4,34 @@
   background-color: white;
   display: flex;
   position: relative;
+  background: #122033;
+  color: white;
+  .underline_anime_left {
+    // width: 100px;
+    height: 3px;
+    background: #a5c749;
+    position: relative;
+    border-radius: 5px;
+    animation: mymove1 3s infinite;
+  }
+  .underline_anime_right {
+    // width: 100px;
+    height: 3px;
+    background: #a5c749;
+    position: relative;
+    border-radius: 5px;
+    animation: mymove2 3s infinite;
+  }
+  
+  @keyframes mymove1 {
+    from {width: 70px;}
+    to {width: 150px;}
+  }
+
+  @keyframes mymove2 {
+    from {width: 50px;}
+    to {width: 110px;}
+  }
   
   .backToHome{
     position: absolute;
@@ -25,15 +53,37 @@
       }
   }
 
+  // h1{
+  //   border-bottom: 2px solid #a5c749!important;
+  //   animation: mymove 5s infinite;
+  // }
+  
+
   
 
   @include mobile {
     flex-direction: column;
   }
 
-  .left {
+  .left {    
     flex: 1;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .graduation, .intermediate, .matriculation{
+      margin: 10px 0;;
+      h3{
+        font-size: 20px;
+        font-weight: 400;
+
+        span{
+          color: gray;
+          font-size: 18px;
+        }
+      }
+    }
 
     img {
       height: 100%;
@@ -46,8 +96,12 @@
     align-items: center;
     justify-content: center;
 
-    .mail, .phone{
-      margin: 10px 0;;
+    .mail, .phone, .online_judge{
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       h3{
         font-size: 20px;
         font-weight: 400;
@@ -55,6 +109,25 @@
         span{
           color: gray;
           font-size: 18px;
+        }
+      }
+      .individual_judges{
+        margin: 10px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        a{
+          text-decoration: none;
+          color: white;
+          display: inline-block;
+          margin: 5px;
+          padding: 10px;
+          border: 1px solid hsla(0,0%,100%,.2);
+          border-radius: 10px;
+
+          &:hover{
+            background-color: rgba(37,53,78,.9);
+          }
         }
       }
     }
@@ -149,3 +222,4 @@
     }
   }
 }
+

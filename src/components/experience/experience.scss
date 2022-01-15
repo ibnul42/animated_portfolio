@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .experience {
-  background-color: rgba(239, 99, 54, 0.6);
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,6 +85,15 @@
             font-weight: bolder;
             margin-top: 5px;
             background: #212d45;
+        }
+
+        .list_styles{
+          list-style-position: inside;
+          list-style-type: disclosure-closed;
+          color: white;
+          li{
+            margin: 8px 0;
+          }
         }
         
     
